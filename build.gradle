@@ -1,0 +1,13 @@
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        implementation("org.apache.spark:spark-core_2.12:3.0.1")
+    }
+    configurations {
+        implementation.exclude module: 'logback-classic'
+    }
+}
