@@ -9,7 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ApacheSparkBeginnerApp implements CommandLineRunner {
     public static void main(String... args){
         SpringApplication.run(ApacheSparkBeginnerApp.class);
-        System.out.println("Running spark-beginner module...");
     }
 
     @Override
