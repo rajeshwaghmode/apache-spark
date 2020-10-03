@@ -12,11 +12,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class TextFileWordCount {
+//This tutorial only focus on Spark 2 and lower versions of it.
+public class TextFileWordCount1 {
     private static final Pattern SPACE = Pattern.compile(" ");
 
     public static void main(String... args) throws FileNotFoundException {
-        SparkConf sparkConf = new SparkConf().setAppName("TextFileWordCount").setMaster("local");
+        SparkConf sparkConf = new SparkConf().setAppName("TextFileWordCount1").setMaster("local");
         JavaSparkContext sparkContext = new JavaSparkContext(sparkConf);
 
         //Reading from single file

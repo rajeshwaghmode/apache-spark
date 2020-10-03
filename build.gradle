@@ -6,6 +6,9 @@ subprojects {
     }
     dependencies {
         implementation("org.apache.spark:spark-core_2.12:3.0.1")
+        implementation("org.apache.spark:spark-sql_2.12:3.0.1")
+        implementation("org.codehaus.janino:commons-compiler:3.0.8")
+        implementation("org.codehaus.janino:janino:3.0.8")
     }
     configurations {
         implementation.exclude module: 'logback-classic'
