@@ -1,0 +1,22 @@
+plugins {
+    id 'scala'
+}
+
+version '3.0.1'
+
+apply plugin: 'scala'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation group: 'org.scala-lang', name: 'scala-library', version: '2.12.14'
+    implementation group: 'org.scala-lang', name: 'scala-compiler', version: '2.12.14'
+
+}
+
+test {
+    useJUnitPlatform()
+}
