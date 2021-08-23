@@ -1,3 +1,3 @@
-include 'spark-java'
-include 'spark-scala'
+include 'java-spark'
+include 'scala-spark'
 
