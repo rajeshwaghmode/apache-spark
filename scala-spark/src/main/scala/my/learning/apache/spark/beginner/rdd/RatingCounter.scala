@@ -1,4 +1,4 @@
-package my.learning.apache.spark.beginner
+package my.learning.apache.spark.beginner.rdd
 
 import org.apache.spark.sql.SparkSession
 
@@ -12,9 +12,10 @@ object RatingCounter {
       .sparkContext
 
     val file = getClass.getResource("/data/movie/MovieRating.txt").getFile()
-    val lines = sc.textFile(file)
-    val ratings = lines.map(s => s.split(",")(1))
-
-    ratings.countByValue().foreach(println)
+    sc.textFile(file)
+      .map(s => s.split(",")(1))
+      .filter(s => s != null || !s.isBlank)
+      .countByValue()
+      .foreach(println)
   }
 }
