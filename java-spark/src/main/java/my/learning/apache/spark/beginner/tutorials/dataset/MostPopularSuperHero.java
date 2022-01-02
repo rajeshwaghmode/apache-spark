@@ -18,10 +18,6 @@ public class MostPopularSuperHero {
             .add("id",  DataTypes.IntegerType, true)
             .add("name", DataTypes.StringType, true);
 
-        StructType superHeroConnectionSchema = new StructType()
-            .add("id",  DataTypes.StringType, true)
-            .add("connections", DataTypes.StringType, true);
-
         SparkSession spark = SparkSession.builder()
             .master("local[*]")
             .appName("MostPopularSuperHero")
